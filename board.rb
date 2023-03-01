@@ -4,7 +4,7 @@ class Board
     @game_board = @game_board.each_with_index { |value, index| @game_board[index] = index + 1 }
   end
 
-  def print_board(game_board)
+  def print_board()
     puts "#{@game_board[0]} | #{@game_board[1]} | #{@game_board[2]}"
     puts '---------'
     puts "#{@game_board[3]} | #{@game_board[4]} | #{@game_board[5]}"
@@ -46,7 +46,7 @@ class Board
       when 1..9
         if @game_board.include?(location)
           @game_board[location - 1] = mark
-          print_board(@game_board)
+          print_board()
           x = true
         else 
           puts "Invalid location number"

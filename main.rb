@@ -21,7 +21,7 @@ class Game
   end
 
   def play_game()
-    @game_board.print_board(@game_board)
+    @game_board.print_board()
     is_winner = false
     while is_winner == false
       @game_board.mark_game_board(@player_1, @player_1.mark, @game_board)
